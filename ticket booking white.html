@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>liverpool football club </title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            background-color: #004d00;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        section {
+            margin: 20px 0;
+            padding: 20px;
+            background: red;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #004d00;
+        }
+        .button {
+            background-color: #004d00;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #003300;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>LIVERPOOL FOOTBALL CLUB</h1>
+</header>
+
+<section>
+    <h2>Upcoming Matches</h2>
+    <ul>
+        <li>lfc vs mufc - September 30, 2024</li>
+        <li>lfc vs chf - October 14, 2024</li>
+        <li>lfc vs nufc - October 28, 2024</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Book Your Tickets</h2>
+    <form id="ticket-form">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="match">Select Match:</label><br>
+        <select id="match" name="match" required>
+            <option value="LFC vs >MUFC</option>
+            <option value="LFC vs CHF</option>
+            <option value="LFCvs >NUFC</option>
+        </select><br><br>
+
+        <label for="tickets">Number of Tickets:</label><br>
+        <input type="number" id="tickets" name="tickets" min="1" required><br><br>
+
+        <button type="submit" class="button">Book Now</button>
+    </form>
+</section>
+
+<section>
+    <h2>Contact Us</h2>
+    <p>If you have any questions, please contact us at:</p>
+    <p>Email: support@liverpool.com</p>
+    <p>Phone: +254707138271</p>
+</section>
+
+<script>
+    document.getElementById('ticket-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        alert('Tickets booked successfully!');
+        this.reset();
+    });
+</script>
+
+</body>
+</html>
